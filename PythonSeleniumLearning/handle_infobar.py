@@ -17,7 +17,7 @@ class Demo_handle_infobar():
         driver.maximize_window()
         time.sleep(3)
         driver.quit()
-# now you will not see the infobar
+# now you will not see the infobar in top
 
 dsw = Demo_handle_infobar()
 dsw.infobar_demo()
