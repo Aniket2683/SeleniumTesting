@@ -15,7 +15,7 @@ class Demo_wait():
         driver.maximize_window()
 
         driver.find_element(By.CLASS_NAME,"dropbtn").click()
-        # now we have to explixxitly wait for flipkart button to appear
+        # now we have to explicitly wait for flipkart button to appear
         # Note : Explicit wait is a local wait
         wait = WebDriverWait(driver,10)
         flipkart_option = wait.until(expected_conditions.visibility_of_element_located((By.LINK_TEXT,"Flipkart")))
