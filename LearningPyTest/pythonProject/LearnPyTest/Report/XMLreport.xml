@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="7" time="0.091" timestamp="2024-03-01T21:35:15.191772" hostname="LAPTOP-LV2LTT0H"><testcase classname="test_Sample" name="test_sample_one" time="0.002" /><testcase classname="test_handle_assert" name="test_assert1" time="0.001"><failure message="AssertionError: a is not equal to b&#10;assert 5 == 10">def test_assert1():
+        a=5
+        b=10
+&gt;       assert a == b,"a is not equal to b"
+E       AssertionError: a is not equal to b
+E       assert 5 == 10
+
+test_handle_assert.py:6: AssertionError</failure></testcase><testcase classname="test_handle_assert" name="test_assert2" time="0.001" /><testcase classname="test_handle_assert" name="test_assert3" time="0.001"><failure message="AssertionError: Aniket is not equal to Jaiswal&#10;assert False&#10; +  where False = &lt;method-wrapper '__eq__' of str object at 0x0000018BFE9949F0&gt;('Jaiswal')&#10; +    where &lt;method-wrapper '__eq__' of str object at 0x0000018BFE9949F0&gt; = 'Aniket'.__eq__">def test_assert3():
+        a="Aniket"
+        b="Jaiswal"
+&gt;       assert a.__eq__(b),"Aniket is not equal to Jaiswal"
+E       AssertionError: Aniket is not equal to Jaiswal
+E       assert False
+E        +  where False = &lt;method-wrapper '__eq__' of str object at 0x0000018BFE9949F0&gt;('Jaiswal')
+E        +    where &lt;method-wrapper '__eq__' of str object at 0x0000018BFE9949F0&gt; = 'Aniket'.__eq__
+
+test_handle_assert.py:16: AssertionError</failure></testcase><testcase classname="test_handle_flags" name="test_sample_one" time="0.001" /><testcase classname="test_handle_flags" name="test_sample_two" time="0.001"><failure message="assert False">def test_sample_two():
+        print("Inside sample two")
+&gt;       assert False
+E       assert False
+
+test_handle_flags.py:7: AssertionError</failure></testcase><testcase classname="test_handle_flags" name="test_sample_three" time="0.001" /></testsuite></testsuites>
