@@ -14,3 +14,6 @@ def test_LoginWithValidCred(setup_and_teardown):
 
 def test_LoginWithValidEmail(setup_and_teardown):
     print("Testing test_LoginWithValidEmail")
+
+
+# It becomes very difficult if we have multiple py files, then in each file we need to duplicate the fixture code.Therefore we create a conftest.py file
