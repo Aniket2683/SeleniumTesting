@@ -43,7 +43,7 @@ def test_login_with_invalid_credentials(driver):
 
 
 @allure.title("Test Login with Valid Username and Invalid Password")
-def test_login_with_invalid_credentials(driver):
+def test_login_with_invalid_password(driver):
     driver.find_element(By.LINK_TEXT, "Make Appointment").click()
     action = ActionChains(driver)
     name = 'John Doe'
@@ -66,7 +66,7 @@ def test_login_with_invalid_credentials(driver):
 
 
 @allure.title("Test Login with Invalid Username and Valid Password")
-def test_login_with_invalid_credentials(driver):
+def test_login_with_invalid_username(driver):
     driver.find_element(By.LINK_TEXT, "Make Appointment").click()
     action = ActionChains(driver)
     name = 'Rohan '
