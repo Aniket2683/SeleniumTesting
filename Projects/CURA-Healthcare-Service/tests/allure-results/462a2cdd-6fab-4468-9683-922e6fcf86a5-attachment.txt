@@ -1,8 +1,0 @@
-Appointment Confirmation
-Please be informed that your appointment has been booked as following:
---------------------------------
-Facility ---> Seoul CURA Healthcare Center
-Apply for hospital readmission ---> Yes
-Healthcare Program ---> None
-Visit Date ---> 26/08/2024
-Comment ---> No healthcare program selected. Symptoms include headache and high fever.
