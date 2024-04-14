@@ -42,6 +42,52 @@ def test_login_with_invalid_credentials(driver):
         assert expected_text == actual_text
 
 
+@allure.title("Test Login with Valid Username and Invalid Password")
+def test_login_with_invalid_credentials(driver):
+    driver.find_element(By.LINK_TEXT, "Make Appointment").click()
+    action = ActionChains(driver)
+    name = 'John Doe'
+    passWord = '123123123'
+    username_field = driver.find_element(By.NAME, "username")
+    action.click(username_field).send_keys(name).perform()
+    password_field = driver.find_element(By.NAME, "password")
+    action.click(password_field).send_keys(passWord).perform()
+    driver.find_element(By.ID, "btn-login").click()
+    expected_text = 'Make Appointment.'
+    actual_text = driver.find_element(By.XPATH, "//p[@class='lead text-danger']").text
+    if expected_text != actual_text:
+        driver.get_screenshot_as_file("screenshots/login-failed-with-invalid-password.png")
+        allure.attach(driver.get_screenshot_as_png(),name="Invalid Password",attachment_type= allure.attachment_type.PNG)
+        print("Screenshot Captured!!")
+        print("Invalid credentials(Password) :")
+        print("Name : " + name)
+        print("Password :" + passWord)
+        assert expected_text == actual_text
+
+
+@allure.title("Test Login with Invalid Username and Valid Password")
+def test_login_with_invalid_credentials(driver):
+    driver.find_element(By.LINK_TEXT, "Make Appointment").click()
+    action = ActionChains(driver)
+    name = 'Rohan '
+    passWord = 'ThisIsNotAPassword'
+    username_field = driver.find_element(By.NAME, "username")
+    action.click(username_field).send_keys(name).perform()
+    password_field = driver.find_element(By.NAME, "password")
+    action.click(password_field).send_keys(passWord).perform()
+    driver.find_element(By.ID, "btn-login").click()
+    expected_text = 'Make Appointment.'
+    actual_text = driver.find_element(By.XPATH, "//p[@class='lead text-danger']").text
+    if expected_text != actual_text:
+        driver.get_screenshot_as_file("screenshots/login-failed-with-invalid-username.png")
+        allure.attach(driver.get_screenshot_as_png(),name="Invalid Username",attachment_type= allure.attachment_type.PNG)
+        print("Screenshot Captured!!")
+        print("Invalid credentials(Username) :")
+        print("Name : " + name)
+        print("Password :" + passWord)
+        assert expected_text == actual_text
+
+
 @allure.title("Test Login Without Credentials")
 def test_login_without_credentials(driver):
     driver.find_element(By.LINK_TEXT, "Make Appointment").click()
