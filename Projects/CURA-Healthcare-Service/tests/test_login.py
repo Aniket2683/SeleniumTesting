@@ -111,3 +111,4 @@ def test_login_without_credentials(driver):
         print("Name : ''")
         print("Password : '' ")
         assert expected_text == actual_text
+

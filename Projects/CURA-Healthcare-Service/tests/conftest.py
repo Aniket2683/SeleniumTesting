@@ -15,3 +15,4 @@ def driver():
 
     # Teardown
     driver.quit()
+

@@ -87,3 +87,4 @@ def test_make_appointment(driver):
     expected_h3 = 'We Care About Your Health'
     actual_h3 = driver.find_element(By.XPATH, "//h3").text
     assert expected_h3.__eq__(actual_h3)
+
