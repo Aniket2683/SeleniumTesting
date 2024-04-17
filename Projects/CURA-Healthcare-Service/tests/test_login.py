@@ -34,7 +34,7 @@ def test_login_with_invalid_credentials(driver):
     actual_text = driver.find_element(By.XPATH, "//p[@class='lead text-danger']").text
     if expected_text != actual_text:
         driver.get_screenshot_as_file("screenshots/login-failed-with-invalid-cred.png")
-        allure.attach(driver.get_screenshot_as_png(),name="Invalid Creds",attachment_type= allure.attachment_type.PNG)
+        allure.attach(driver.get_screenshot_as_png(), name="Invalid Creds", attachment_type=allure.attachment_type.PNG)
         print("Screenshot Captured!!")
         print("Invalid credentials :")
         print("Name : " + name)
@@ -57,7 +57,8 @@ def test_login_with_invalid_password(driver):
     actual_text = driver.find_element(By.XPATH, "//p[@class='lead text-danger']").text
     if expected_text != actual_text:
         driver.get_screenshot_as_file("screenshots/login-failed-with-invalid-password.png")
-        allure.attach(driver.get_screenshot_as_png(),name="Invalid Password",attachment_type= allure.attachment_type.PNG)
+        allure.attach(driver.get_screenshot_as_png(), name="Invalid Password",
+                      attachment_type=allure.attachment_type.PNG)
         print("Screenshot Captured!!")
         print("Invalid credentials(Password) :")
         print("Name : " + name)
@@ -80,7 +81,8 @@ def test_login_with_invalid_username(driver):
     actual_text = driver.find_element(By.XPATH, "//p[@class='lead text-danger']").text
     if expected_text != actual_text:
         driver.get_screenshot_as_file("screenshots/login-failed-with-invalid-username.png")
-        allure.attach(driver.get_screenshot_as_png(),name="Invalid Username",attachment_type= allure.attachment_type.PNG)
+        allure.attach(driver.get_screenshot_as_png(), name="Invalid Username",
+                      attachment_type=allure.attachment_type.PNG)
         print("Screenshot Captured!!")
         print("Invalid credentials(Username) :")
         print("Name : " + name)
@@ -103,7 +105,7 @@ def test_login_without_credentials(driver):
 
     if expected_text != actual_text:
         driver.get_screenshot_as_file("screenshots/login-failed-without-cred.png")
-        allure.attach(driver.get_screenshot_as_png(),name="Without Creds",attachment_type=allure.attachment_type.PNG)
+        allure.attach(driver.get_screenshot_as_png(), name="Without Creds", attachment_type=allure.attachment_type.PNG)
         print("Screenshot Captured!!")
         print("No credentials :")
         print("Name : ''")
